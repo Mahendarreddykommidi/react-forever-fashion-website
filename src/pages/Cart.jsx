@@ -5,8 +5,10 @@ import { assets } from "../assets/frontend_assets/assets";
 import Carttotal from "../components/Carttotal";
 
 const Cart = () => {
-  const { products, currency, Cartitems ,updateQuantity} = useContext(Shopcontext);
+  const { products, currency,Cartitems ,updateQuantity} = useContext(Shopcontext);
   const [cartData, setCartdata] = useState([]);
+
+  
 
   useEffect(() => {
     const tempdata = [];

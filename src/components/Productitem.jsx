@@ -7,10 +7,6 @@ import { Link } from 'react-router-dom'
 const Productitem = ({ id, name, image, price }) => {
     const currency="$"
 
-
-
-
-
     return (
         <div>  
         <Link

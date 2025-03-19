@@ -18,6 +18,9 @@
 }
 a.active hr{
     display: block;
+    border-bottom: 2px solid black;
+    width: 30px;
+    
     
 }
 .drop-down-menu{
@@ -25,4 +28,13 @@ a.active hr{
 }
 .drop-down-menu:hover{
     display: block;
+}
+
+@media (max-width:678px) {
+    a.active  {
+        background-color: black;
+        color: white;
+        
+    }
+    
 }

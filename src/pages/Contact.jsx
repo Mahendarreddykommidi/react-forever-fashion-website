@@ -19,11 +19,11 @@ const Contact = () => {
 <p className='text-xl font-light'>54709 Willms Station
 Suite 350, Washington, USA</p>
 <p className='text-xl font-light'>Tel: (415) 555-0132</p>
-<p className='text-xl font-light'>Email: admin@forever.com</p>
+<p className='text-sm font-light'>Email: admin@forever.com</p>
 <p className='text-2xl text-gray-600'>Careers at Forever</p>
-<p className='text-xl font-light'>Learn more about our teams and job openings.</p>
+<p className='text-xl font-extralight'>Learn more about our teams and job openings.</p>
 
-<button className='px-4 py-3 border-gray-300 border-2 hover:bg-black text-black '>Explore Jobs</button>
+<button className='px-4 py-3 border-gray-300 border-2  text-black hover:bg-black hover:text-white transition-all duration-300 '>Explore Jobs</button>
 </div>   
 
 
