@@ -62,7 +62,7 @@ const Placeorders = () => {
                 </div>
 
                 </div>
-                <button onClick={()=>navigation('/Orders')} className='bg-black px-5 py-1.5 hover:bg-gray-600 rounded-sm text-sm text-white my-3 tex-center'  >Placeorder</button>
+                <button onClick={()=>navigation('/Orders')} className='bg-black px-5 py-1.5 hover:bg-gray-600 rounded-sm text-sm text-white my-3 tex-center'  >PLACE ORDER</button>
                
             </div>
 

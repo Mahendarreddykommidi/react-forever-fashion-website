@@ -30,12 +30,12 @@ const Product = () => {
     <div>
       <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
         <div className="flex flex-col md:flex-row gap-12 sm:gap-12 ">
-          <div className="flex-1 flex flex-col-reverse gap-3 md:flex-row">
-            <div className="flex sm:flex-col overflow-x-auto justify-between sm:justify-normal gap-2 sm:overflow-y-scroll">
+          <div className="flex-1 flex flex-col-reverse gap-3 lg:flex-row">
+            <div className="flex md:flex-col overflow-x-auto justify-between sm:justify-normal gap-2 sm:overflow-y-scroll">
               {productsdata.image.map((item, index) => (
                 <img
                   src={item}
-                  alt=""
+                  alt="" 
                   key={index}
                   onClick={()=>SetImage(item)}
                   className="w-[24%] sm:w-1/3 sm:mb-3 flex-shrink-0 cursor-pointer"
@@ -48,8 +48,8 @@ const Product = () => {
 
       </div>
       <div className="flex-1">
-        <h1 className="font-medium text-xl ">{productsdata.name}</h1>
-        <div className="flex items-center gap-1 mt-2 ">
+        <h1 className="font-medium text-xl ">{productsdata.name}</h1> 
+        <div className="flex items-center gap-1 mt-2 "> 
           <img src={assets.star_icon} alt=""  className="w-3 "/>
           <img src={ assets.star_icon} alt="" className="w-3" />
           <img src={ assets.star_icon} alt="" className="w-3" />

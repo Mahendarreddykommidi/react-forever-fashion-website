@@ -15,6 +15,7 @@ const Latestcollections = () => {
     }, [])
 
 
+
     return (
         <div className='my-10'>
             <div className="text-center py-8 text-3xl ">
@@ -34,6 +35,7 @@ const Latestcollections = () => {
                         image={item.image}
                         name={item.name}
                         price={item.price}
+
                     />
                 ))}
             

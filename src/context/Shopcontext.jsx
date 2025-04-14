@@ -3,17 +3,21 @@ import { products } from "../assets/frontend_assets/assets"
 import {toast} from "react-toastify";
 
 
-export const Shopcontext = createContext()
+
+export const Shopcontext = createContext();
+  
 const Shopcontextprovider = (props) => {
-   const currency="$"
+   
 
     const deliveryfee = 10;
     const[search,setSearch]=useState(false)
     const [showSearch,Showsetsearch]=useState(false);
     const [Cartitems,setCartitems]=useState({})
+    const currency="$";
     
-    console.log(import.meta.env.Currency)
+    
 
+   
     const addtoCart=async(itemId,size)=>{
 
         if(!size){
@@ -88,7 +92,6 @@ const Shopcontextprovider = (props) => {
 
     const value = {
         products,currency,
-
         deliveryfee,getCartamount,
         search,setSearch,
         Cartitems,addtoCart,

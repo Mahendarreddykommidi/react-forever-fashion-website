@@ -10,6 +10,7 @@ const Navbar = () => {
   const [menu,Setmenu]=useState('')
   const navigation=useNavigate()
   
+  
   return (
     <div className="navbar flex items-center justify-between py-5 font-medium">
     

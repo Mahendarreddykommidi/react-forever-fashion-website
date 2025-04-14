@@ -3,8 +3,8 @@ import { Shopcontext } from '../context/Shopcontext'
 import Title from '../components/Title'
 
 const Orders = () => {
-    const {products, currency} = useContext(Shopcontext)
-    
+    const {products} = useContext(Shopcontext)
+    const currency="$"
     return (
         <div>
             <div className="border-t pt-16">

@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Carttotal = () => {
     const navigation=useNavigate()
-    const {currency,deliveryfee,getCartamount,navigate}=useContext(Shopcontext);
+    const {deliveryfee,getCartamount,navigate}=useContext(Shopcontext);
+    const currency="$"
    
   return (
     <div className='w-full'>
@@ -36,7 +37,7 @@ const Carttotal = () => {
 
 
         </div>
-        <button onClick={()=>navigation('/Placeorders')} className='bg-black px-5 py-1.5 hover:bg-gray-600 rounded-sm text-sm text-white my-3 tex-center'  >Placeorder</button>
+        <button onClick={()=>navigation('/Placeorders')} className='bg-black px-5 py-1.5 hover:bg-gray-600 rounded-sm text-sm text-white my-3 tex-center'  >PROCEED TO CHECKOUT</button>
 
 
 

@@ -1,11 +1,14 @@
 
-import React, { useContext } from 'react'
-import { Shopcontext } from '../context/Shopcontext'
+
 import { Link } from 'react-router-dom'
+import {useContext} from "react";
+import {Shopcontext} from "../context/Shopcontext.jsx";
 
 
-const Productitem = ({ id, name, image, price }) => {
-    const currency="$"
+
+const Productitem = ({ id, name, image, price,}) => {
+
+
 
     return (
         <div>  
@@ -21,11 +24,12 @@ const Productitem = ({ id, name, image, price }) => {
             </div>
             
             <h3 className='mt-3 mb-1 text-sm font-medium'>{name}</h3>
+              <div className="font-semibold text-sm text-gray-500">
+                   ${price}
+              </div>
           
         </Link>
-        <p className='text-sm font-semibold text-center'>
-                {currency}{price}
-            </p>
+
         </div>
 
     );
