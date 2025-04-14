@@ -11,6 +11,10 @@ const Navbar = () => {
   const navigation=useNavigate()
   
   
+  const handleNavLinkClick = () => {
+    setvisible(false);
+  };
+
   return (
     <div className="navbar flex items-center justify-between py-5 font-medium">
     
@@ -18,19 +22,19 @@ const Navbar = () => {
     
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700  ">
-        <NavLink to="/" className="flex flex-col items-center gap-1">
+        <NavLink to="/" className="flex flex-col items-center gap-1" onClick={handleNavLinkClick}>
           <p>Home</p>
           <hr className="w-2/4 border-none h-1.5px bg-gray-700 hidden"  />
         </NavLink>
-        <NavLink to="/collections" className="flex flex-col items-center gap-1 ">
+        <NavLink to="/collections" className="flex flex-col items-center gap-1 " onClick={handleNavLinkClick}>
           <p>Collection</p>
           <hr className="w-2/4 border-none h-1.5px bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/about" className="flex flex-col items-center gap-1">
+        <NavLink to="/about" className="flex flex-col items-center gap-1" onClick={handleNavLinkClick}>
           <p>About</p>
           <hr className="w-2/4 border-none h-1.5px bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/contact" className="flex flex-col items-center gap-1">
+        <NavLink to="/contact" className="flex flex-col items-center gap-1" onClick={handleNavLinkClick}>
           <p>Contact</p>
           <hr className="w-2/4 border-none h-1.5px bg-gray-700 hidden" />
         </NavLink>
@@ -73,7 +77,7 @@ const Navbar = () => {
           alt=""
           className="w-5 cursor-pointer sm:hidden "
         />
-      </div>
+      </div> 
 
       <div
         className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
@@ -82,22 +86,22 @@ const Navbar = () => {
       >
         <div className="flex flex-col text-gry-600">
           <div
-            className="flex items-center gap-4 p-3"
+            className="flex items-center  gap-4 p-3"
             onClick={() => setvisible(false)}
           >
             <img src={assets.dropdown_icon} className="h-4 rotate-180" alt="" />
             <p>Back</p>
           </div>
-          <NavLink to="/" className="py-2 pl-6 border-b">
+          <NavLink to="/" className="py-2 pl-6 border-b" onClick={handleNavLinkClick}>
             Home
           </NavLink>
-          <NavLink to="/collections" className="py-2 pl-6 border-b">
+          <NavLink to="/collections" className="py-2 pl-6 border-b" onClick={handleNavLinkClick}>
             Collection
           </NavLink>
-          <NavLink to="/about" className="py-2 pl-6 border-b">
+          <NavLink to="/about" className="py-2 pl-6 border-b" onClick={handleNavLinkClick}>
             About
           </NavLink>
-          <NavLink to="/contact" className="py-2 pl-6 border-b">
+          <NavLink to="/contact" className="py-2 pl-6 border-b" onClick={handleNavLinkClick}>
             Contact
           </NavLink>
         </div>
