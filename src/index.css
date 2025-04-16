@@ -30,7 +30,7 @@ a.active hr{
     display: block;
 }
 
-@media (max-width:678px) {
+@media (width<647px) {
     a.active  {
         background-color: black;
         color: white;
