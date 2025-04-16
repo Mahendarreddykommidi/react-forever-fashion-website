@@ -3,7 +3,7 @@ import { assets } from "../assets/frontend_assets/assets";
 import Title from "../components/Title";
 import { Shopcontext } from "../context/Shopcontext";
 import Productitem from "../components/Productitem";
-import Searchbar from "../components/Searchbar";
+
 
 
 const Collection = () => {
