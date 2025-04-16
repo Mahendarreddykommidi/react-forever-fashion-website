@@ -3,6 +3,7 @@ import { assets } from "../assets/frontend_assets/assets";
 import Title from "../components/Title";
 import { Shopcontext } from "../context/Shopcontext";
 import Productitem from "../components/Productitem";
+import Searchbar from "../components/Searchbar";
 
 
 const Collection = () => {
@@ -11,7 +12,7 @@ const Collection = () => {
   const [category, setCategory] = useState([]);
   const [subCategory, setSubcategory] = useState([]);
   const [sortype,setSortype]=useState('relavant');
-  const { products ,search,setSearch,showSearch,Showsetsearch} = useContext(Shopcontext);
+  const { products ,search,setSearch,showSearch} = useContext(Shopcontext);
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -33,9 +34,10 @@ const Collection = () => {
 
     let productsCopy = [...products];
 
-    if(showSearch && search){
-      productsCopy = productsCopy.filter(item =>item.name.tolowerCase().includes(search.tolowerCase()))
-    
+    if (showSearch && search) {
+      productsCopy = productsCopy.filter(item => 
+        item.name.toLowerCase().includes(search.toLowerCase())
+      );
     }
     
     if (category.length > 0) {
@@ -58,9 +60,9 @@ const Collection = () => {
   useEffect(() => {
 
     applyFilter();
-    setSearch(search)
+    
 
-  }, [category,subCategory]);
+  }, [category,subCategory,search,showSearch]);
 
   useEffect(()=>{
    console.log(subCategory)
@@ -88,6 +90,8 @@ const Collection = () => {
     sortproduct()
   },[sortype])
   return (
+  <>
+  
   
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
       <div className="min-w-60">
@@ -169,7 +173,7 @@ const Collection = () => {
         </div>
         </div>
         </div>
-      
+      </>
   
   );
 };
